@@ -1,0 +1,24 @@
+import java.util.*;
+public class  RepeatedWords
+{
+public static void main(String args[]) 
+{
+String str="stars is stars and is";
+   String[] s=str.split(" ");
+   int count;
+   for(int i=0;i<s.length;i++){
+    count=1;
+     for(int j=i+1;j<s.length;j++){
+   if(s[i].equals(s[j])) 
+   {
+     count++;
+     s[j]="0";
+     }
+ 
+   }
+     if(s[i]!="0" && count>1)
+    System.out.println(s[i]+" "+count);
+  //System.out.println(count); 
+} 
+}
+}
